@@ -1,0 +1,41 @@
+@use"../base/_mixin.scss" as *;
+
+.l-feature{
+  padding: px-clamp(60,80,375,2000) 0 px-clamp(120,160,375,2000) 0;
+  &__body{
+    margin-top: px-clamp(30,60,375,2000);
+  }
+  &__wrapper{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  &__circle-box:not(:first-child){
+    margin-left: px-clamp(15,43,375,2000);
+  }
+  &__circle{
+    position: relative;
+    width: px-clamp(100,258,375,2000);
+    height: px-clamp(100,258,375,2000);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__circle-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: px-to-rem(14px);
+  }
+  &__text-body{
+    margin-top: px-to-rem(15px);
+    display: grid;
+    row-gap: px-to-rem(5px);
+    text-align: center;
+  }
+  &__text-desc{
+    white-space: nowrap;
+    font-size: px-to-rem(14px);
+  }
+}

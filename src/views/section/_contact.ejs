@@ -1,0 +1,23 @@
+<section class="l-contact theme-contact-bg">
+  <div class="m-container">
+      <h2 class="m-section-title">お問い合わせ</h2>
+        <div class="m-section-subhead">
+            <p class="m-section-subhead-text">お問い合わせは下記からお願いいたします。</p>
+        </div>
+       <div class="l-contact__body">
+         <div class="l-contact__wrapper">
+            <% contactData.forEach((item)=>{ %>
+              <div class="l-contact__info-box theme-contact-info-box">
+               <a href="#">
+                <figure class="l-contact__info-image">
+                  <img width="64" height="64" src="../img/<%= item.icon %>" alt="<%= item.alt %>">
+                  <figcaption><%= item.caption %></figcaption>
+                </figure>
+                <span class="l-contact__info-box-triangle theme-contact__info-box-triangle"></span>
+               </a>
+              </div>
+           <% }) %>
+         </div>
+       </div>
+    </div>
+</section>

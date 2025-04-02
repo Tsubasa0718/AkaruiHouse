@@ -1,0 +1,23 @@
+// nav
+.l-nav.is-active{
+    transform: none;
+}
+// hamburger
+.l-hamburger-menu.is-active > .l-hamburger-menu__line:nth-child(1){
+   top: 50%;
+   transform: translate(-50%, -50%) rotate(-315deg);
+}
+.l-hamburger-menu.is-active > .l-hamburger-menu__line:nth-child(2){
+   opacity: 0;
+}
+
+.l-hamburger-menu.is-active > .l-hamburger-menu__line:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(315deg);
+}
+// mask
+.l-mask.is-active{
+    visibility: visible;
+    opacity: 1;
+}
+// side-btn

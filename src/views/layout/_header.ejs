@@ -1,0 +1,40 @@
+<header class="l-header theme-header">
+  <div class="l-header__body">
+
+        <h1 class="l-header__logo">
+          <a href="#">
+            <img width="200" height="59" src="../img/logo.png" alt="明るいHOUSEサイトのロゴ">
+          </a>
+        </h1>
+        <!-- nav -->
+        <nav class="l-nav theme-nav" id="is-nav" aria-hidden="true">
+            <ul class="l-nav__list">
+                <% navData.forEach((item)=>{ %>
+                 <li class="l-nav__item"><a class="l-nav__link" href="<%= item.link %>"><%= item.title %></a></li>
+               <% }) %>
+            </ul>
+            <!-- sns -->
+             <ul class="l-nav__sns-list">
+              <% snsData.forEach((item)=>{ %>
+                <li class="l-nav__sns-item">
+                 <a class="l-nav__sns-link" href="<%= item.link %>">
+                  <%= item.title %>
+                </a></li>
+             <% }) %>
+             </ul>
+          </nav>
+          <!-- mask -->
+           <div id="is-mask" class="l-mask theme-mask l-sp-only"></div>
+       <!-- hamburger-menu -->
+        <button id="js-hamburger-menu"
+                type="button"
+                class="l-hamburger-menu l-sp-only"
+                aria-controls="is-nav"
+                aria-expanded="false">
+            <span class="l-hamburger-menu__line theme-hamburger-menu-line"></span>
+            <span class="l-hamburger-menu__line theme-hamburger-menu-line"></span>
+            <span class="l-hamburger-menu__line theme-hamburger-menu-line"></span>
+        </button>
+
+  </div>
+   </header>

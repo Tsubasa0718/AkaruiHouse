@@ -1,0 +1,20 @@
+<section class="l-feature theme-feature-bg">
+    <div class="m-container">
+        <h2 class="m-section-title theme-section-title">明るいHOUSEの特徴</h2>
+        <div class="l-feature__body">
+            <div class="l-feature__wrapper">
+                <% featureData.forEach((item)=>{ %>
+                 <div class="l-feature__circle-box theme-feature-circle-color">
+                    <div class="l-feature__circle  theme-feature-circle-border theme-feature__circle">
+                        <span class="l-feature__circle-text"><%= item.figure %></span>
+                      </div>
+                     <div class="l-feature__text-body">
+                        <p class="l-feature__text-name"><%= item.title %></p>
+                        <p class="l-feature__text-desc"><%= item.text %></p>
+                     </div>
+                 </div>
+               <% }) %>
+            </div>
+        </div>
+    </div>
+</section>

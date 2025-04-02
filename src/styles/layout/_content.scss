@@ -1,0 +1,7 @@
+@use"../base/_mixin.scss" as *;
+
+.l-content{
+  @include responsive("tablet"){
+    padding-left: px-to-rem(300px);
+  }
+}

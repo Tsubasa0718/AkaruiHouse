@@ -1,0 +1,37 @@
+@use "../base/_mixin.scss" as *;
+
+.l-nav{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: px-to-rem(300px);
+ height: 100vh;
+ z-index: 3;
+ transform: translateX(-300px);
+ transition: transform .3s;
+ @include responsive("tablet"){
+   position: static;
+   width: auto;
+   height: auto;
+   transform: none;
+ }
+ &__list {
+   margin: px-to-rem(35px) 0 0 px-to-rem(25px);
+ }
+ &__item:not(:first-of-type){
+    margin-top: px-to-rem(20px);
+ }
+ &__link{
+    font-size: px-to-rem(14px);
+ }
+ //  sns
+ &__sns-list{
+    margin: px-to-rem(50px) 0 0 px-to-rem(25px);
+ }
+ &__sns-item{
+    margin-top: px-to-rem(20px);
+ }
+ &__sns-link{
+    font-size: px-to-rem(14px);
+ }
+}

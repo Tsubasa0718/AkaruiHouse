@@ -1,0 +1,27 @@
+@use "../base/_mixin.scss" as *;
+
+.m-section-title{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-size: px-clamp(20,28,375,2000);
+ font-weight: bold;
+ white-space: nowrap;
+ padding: 0 px-to-rem(10px);
+ @include responsive("tablet"){
+    padding: 0;
+ }
+}
+.m-section-title::before,
+.m-section-title::after{
+    border-top: 1px solid;
+    content: "";
+    width: 20%;
+    @include responsive("tablet"){
+        width: 28%;
+    }
+}
+
+.m-section-subhead{
+    margin-top: px-clamp(30,60,375,2000);
+}

@@ -1,0 +1,18 @@
+@use "../base/_mixin.scss" as *;
+
+.l-header{
+    position: fixed;
+    top: 0;
+    left: 0%;
+    z-index: 1;
+    width: 100%;
+    height: px-to-rem(72px);
+    @include responsive("tablet"){
+        width: px-to-rem(300px);
+        height: 100vh;
+    }
+    &__body{
+     padding: px-to-rem(9px) px-to-rem(18px);
+    }
+
+}

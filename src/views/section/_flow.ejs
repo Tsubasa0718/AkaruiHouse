@@ -1,0 +1,45 @@
+<section class="l-flow theme-flow-bg">
+    <div class="m-container">
+        <h2 class="m-section-title">家ができるまでの流れ</h2>
+        <div class="m-section-subhead">
+            <p class="c-section-subhead-text ">お問い合わせいただいてから、家が完成するまでの流れです。</p>
+        </div>
+      <div class="l-flow__body">
+         <div class="l-flow__wrapper">
+             <!-- flowchart図 -->
+          <div class="l-flow__steps-body">
+            <% flowData.figure.forEach((item, index) => { %>
+            <div class="l-flow__steps-box">
+                <div class="l-flow__steps theme-flow-steps-bg">
+                    <div class="l-flow__steps-wrapper">
+                    <div class="l-flow__steps-number"><%= item.number %>.</div>
+                    <div class="l-flow__steps-title"><%= item.title %></div>
+                    </div>
+                </div>
+                <% if (index < flowData.figure.length - 1) { %>
+                <div class="l-flow__steps-bar theme-flow-steps-bar"></div>
+                <% } %>
+            </div>
+            <% }) %>
+        </div>
+        <!-- flowchartテキストテキスト -->
+        <div class="l-flow__steps-desc-body">
+            <% flowData.desc.forEach((step) => { %>
+            <div class="l-flow__steps-desc">
+                 <div class="l-flow-steps-desc-number-bg">
+                    <span class="l-flow__steps-desc-number theme-steps-desc-number-bg"><%= step.number %></span>
+                 </div>
+                <div class="l-flow__steps-desc-wrapper">
+                    <h3 class="l-flow__steps-desc-title theme-flow-steps-desc-title"><%= step.title %></h3>
+                    <div class="l-flow__steps-desc-text-body">
+                        <p class="l-flow__steps-desc-text"><%= step.text %></p>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+
+         </div>
+      </div>
+    </div>
+</section>

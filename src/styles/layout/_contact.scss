@@ -1,0 +1,39 @@
+@use "../base/_mixin.scss" as *;
+
+.l-contact{
+    padding: px-clamp(60,80,375,2000) 0 px-clamp(120,160,375,2000);
+   &__body{
+    margin-top: px-clamp(30,60,375,2000);
+   }
+   &__wrapper{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: px-to-rem(20px);
+    justify-items: center;
+    @include responsive("phone"){
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 0;
+        column-gap: px-clamp(23,43,768,2000);
+    }
+
+   }
+   &__info-box{
+    position: relative;
+    width: px-clamp(201,259,375,2000);
+    height: px-to-rem(189px);
+   }
+   &__info-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   }
+   &__info-box-triangle{
+    position: absolute;
+    right: px-to-rem(4px);
+    bottom: px-to-rem(4px);
+    width: px-to-rem(20px);
+    height: px-to-rem(20px);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+   }
+}

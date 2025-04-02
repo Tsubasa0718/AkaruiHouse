@@ -1,0 +1,17 @@
+<section class="l-project theme-project-bg">
+    <div class="m-container">
+        <h2 class="m-section-title theme-section-title">建築事例を紹介</h2>
+        <div class="l-project__body">
+            <div class="l-project__wrapper">
+                <% projectImageData.forEach((item)=>{ %>
+                  <figure class="l-project__image">
+                    <img width="402" height="256" src="../img/<%= item.image %>" alt="<%= item.alt %>">
+                    <figcaption class="l-project__caption theme-project-caption">
+                        <%= item.desc %>
+                    </figcaption>
+                  </figure>
+               <% }) %>
+            </div>
+        </div>
+    </div>
+</section>

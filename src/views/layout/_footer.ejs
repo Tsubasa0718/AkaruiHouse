@@ -1,0 +1,18 @@
+<footer class="l-footer theme-footer">
+  <div class="m-container">
+    <!-- footer-nav -->
+    <div class="l-footer__nav" role="navigation">
+      <ul class="l-footer__nav-list">
+          <% navData.forEach((item)=>{ %>
+            <li class="l-footer__nav-item theme-footer__nav-item"><a class="l-footer__nav-link" href="#">
+              <%= item.title %>
+            </a></li>
+         <% }) %>
+      </ul>
+  </div>
+  <!-- copy -->
+   <small class="l-footer__copy">
+      Copyright © 2021 Akarui HOUSE All Rights Reserved.
+   </small>
+  </div>
+</footer>

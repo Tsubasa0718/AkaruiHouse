@@ -1,0 +1,29 @@
+@use"../base/_mixin.scss" as *;
+
+.l-project{
+    padding: px-clamp(60,80,375,2000) 0;
+   &__body{
+        margin-top: px-clamp(30,60,375,2000);
+    }
+   &__wrapper{
+     display: grid;
+     grid-template-columns: repeat(1, 1fr);
+     justify-items: center;
+     row-gap: px-to-rem(30px);
+
+     @include responsive("tablet"){
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: px-to-rem(56px);
+     }
+   }
+   &__image{
+    position: relative;
+   }
+   &__caption{
+    position: absolute;
+    bottom: px-to-rem(4px);
+    left: px-to-rem(7px);
+    font-size: px-to-rem(12px);
+
+   }
+}

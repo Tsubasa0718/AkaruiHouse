@@ -1,0 +1,138 @@
+@use"../base/_mixin.scss" as *;
+// body
+body{
+    color: var(--text-color);
+}
+
+// header
+.theme-header{
+    background-color: var(--base-color);
+}
+
+// hamburger-menu
+.theme-hamburger-menu-line{
+  background-color: var(--text-color);
+}
+
+// nav
+.theme-nav{
+    background-color:var(--base-color);
+    @include responsive("tablet"){
+        background-color: transparent;
+    }
+}
+
+// mask
+.theme-mask{
+    background-color: var(--mask-color);
+}
+
+// section-title
+.theme-section-title{
+  color: var(--base-color);
+}
+
+// project
+.theme-project-bg{
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8));
+}
+
+.theme-project-caption{
+     color: var(--base-color);
+}
+
+// feature
+.theme-feature-bg{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.theme-feature-circle-color{
+    color: var(--base-color);
+}
+
+.theme-feature__circle {
+    position: relative;
+    z-index: 1;
+    display: inline-block; /* 要素のサイズを適切に調整 */
+    overflow: hidden; /* はみ出る部分を隠す */
+}
+
+.theme-feature__circle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;  /* 最初は 0% */
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.theme-feature__circle:hover::after {
+    width: 100%;  /* ホバー時に 100% に */
+}
+
+// hover
+
+
+.theme-feature-circle-border{
+    border: px-to-rem(1px) solid var(--base-color);
+}
+
+// flow
+
+.theme-flow-bg{
+    background-color: var(--base-color);
+}
+
+.theme-flow-steps-bg{
+  background-color: var(--stepBg-color);
+  color: var(--base-color);
+}
+.theme-flow-steps-bar{
+    background-color: var(--stepBar-color)
+}
+
+.theme-steps-desc-number-bg{
+    background-color: var(--stepBg-color);
+    color: var(--base-color);
+}
+
+.theme-flow-steps-desc-title{
+    border-bottom: px-to-rem(1px) solid var(--text-color);
+}
+
+// contact
+.theme-contact-bg{
+ background-color: var(--base-color);
+}
+
+.theme-contact-info-box{
+    border: px-to-rem(1px) solid var(--text-color);
+}
+
+.theme-contact__info-box-triangle{
+    background-color: var(--text-color);
+}
+
+// footer
+.theme-footer{
+    background-color: var(--text-color);
+    color: var(--base-color);
+}
+.theme-footer__nav-item{
+    border-right: px-to-rem(1px) solid var(--base-color);
+}
+
+// side-btn
+
+.theme-side-btn--dark{
+    background-color: var(--text-color);
+    border: 1px solid var(--base-color);
+}
+.theme-side-btn-triangle--white{
+    background-color: var(--base-color);
+}
+
